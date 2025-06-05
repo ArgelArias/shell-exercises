@@ -1,0 +1,15 @@
+#sort in lexicographical order
+sort
+
+#sort in reverse lexicographical order
+sort -r
+
+#sort by numeric values
+sort -n
+
+#sort number in reverse order
+sort -nr
+
+#-k the number of the field to make the sort
+#-t to set the delimeter
+sort -nr -k2 -t$'\t'

@@ -1,0 +1,14 @@
+#show the first 20 lines
+head -n 20
+
+#show the first 20 characters
+head -c 20
+
+#show from the line 12 to the 22
+head -n 22 | tail -n 11
+
+#show the last 20 lines
+tail -n 20
+
+#show the last 20 characters
+tail -c 20

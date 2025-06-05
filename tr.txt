@@ -1,0 +1,9 @@
+#translate command
+#tranlate from () to []
+tr "(,)" "[,]"
+
+#delete all the lower case letters
+tr -d "a-z"
+
+#replace a sequence of characters, multiple spaces with only one space
+tr -s " " " "
