@@ -1,0 +1,16 @@
+#substitute the first ocurrence of every line on the file
+sed  's/\bthe\b/this/'
+
+#subtitute all the ocurrences plus is not case sensitive
+sed 's/\bthy\b/your/gi'
+
+#substitute with the same value matched, in case of non sensitive
+# '&' is the key here
+sed 's/\bthy\b/{&}/gi'
+
+#hide the number of a credit card, except the last 4 digits
+sed -E 's/\d{4} /**** /g'
+
+#print out the credit card numbers is reverse order by group of 4
+#this should be made with capture groups in order to use the \4 \3... notation 
+sed -E 's/(\d+) (\d+) (\d+) (\d+)/\4 \3 \2 \1/g'

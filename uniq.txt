@@ -1,0 +1,15 @@
+#filter to show only the unique values, THIS WILL NOT SORT THE FIRTS INPUT
+uniq
+
+#count the number of occurrences, this will not sort it
+uniq -c
+#remove the tab that -c adds to the output, using awk
+uniq -c | awk '{print $1,$2}'
+#remove the tab that -c adds to the output, using sed
+uniq -c | sed 's/ *//'
+
+#ignore case sensitive with -i
+uniq -c -i | sed 's/ *//'
+
+#show only the uniq lines, which are not followed or preceded by identical replications
+uniq -u

@@ -1,0 +1,15 @@
+#check the avg of note grades
+awk '{
+    avg=($2 + $3 +$4)/3;
+    if (avg >= 80) grade="A";
+    else if (avg >=60) grade="B";
+    else if (avg >=50) grade="C";
+    else grade="FAIL";
+    print $0,":",grade
+}'
+
+#print 2 lines into 1 with ; as end of line
+#ORS = Output Recort Separator variable
+#NR = Number of Record variable (Number of line)
+#RS = Record Separator variable (original from the input)
+awk 'ORS=NR%2?";":RS'

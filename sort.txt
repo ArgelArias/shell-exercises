@@ -13,3 +13,4 @@ sort -nr
 #-k the number of the field to make the sort
 #-t to set the delimeter
 sort -nr -k2 -t$'\t'
+sort -nr -k2 -t$'|'

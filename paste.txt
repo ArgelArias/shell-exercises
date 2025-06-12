@@ -1,0 +1,11 @@
+#paste command is used for copy a file into a single line
+#-s is for sequemcial in case you have many files
+#-d is the delimeter which will replace the new lines
+paste -s -d "\t" <filename>
+paste -s -d ";" <filename>
+
+#paste every 3 lines into 1 line
+paste - - - <filename>
+
+#paste every 3 lines into 1 line with delimiter
+paste -d ";" - - - <filename>

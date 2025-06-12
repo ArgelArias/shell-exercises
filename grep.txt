@@ -1,0 +1,21 @@
+#grep is for search text in the selected input
+
+#serach by word
+grep -w  "the"
+
+#ignose case sensitive
+grep -i  "the"
+
+#negative grep, search for no coincidences
+grep -v "the"
+
+#multiple flags can be put in one
+grep -wvi "that"
+
+#using regular expresion on grep with -E
+grep -Ewi "the|that|then|those"
+
+#search for duplicated numbers, even when there is an space between them
+#the \1 makes a reference to 1 previous capture group, so it compares backward
+#capture groups are between parentesis "\(\)"
+grep '\(\d\)\s*\1'
