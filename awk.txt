@@ -1,4 +1,4 @@
-#check the avg of note grades
+#check the avg of note grades, with IF statement
 awk '{
     avg=($2 + $3 +$4)/3;
     if (avg >= 80) grade="A";
@@ -13,3 +13,16 @@ awk '{
 #NR = Number of Record variable (Number of line)
 #RS = Record Separator variable (original from the input)
 awk 'ORS=NR%2?";":RS'
+
+#NF stands for Number of fields
+awk '(NF < 4) {print "Not all scores are available for "$1}'
+
+#more IF statement
+awk '{
+    avg=($2 + $3 + $4)/3;
+    if (avg >= 50)
+        score="Pass";
+    else
+        score="Fail";
+    print $1, ":", score
+}'

@@ -14,3 +14,6 @@ sed -E 's/\d{4} /**** /g'
 #print out the credit card numbers is reverse order by group of 4
 #this should be made with capture groups in order to use the \4 \3... notation 
 sed -E 's/(\d+) (\d+) (\d+) (\d+)/\4 \3 \2 \1/g'
+
+#change the first Capital letter to . and replace the \n to space
+sed -E 's/^[A-Z]/./'  | tr "\n" " "

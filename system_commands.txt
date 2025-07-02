@@ -1,0 +1,14 @@
+#format a volume
+sudo fdisk <volume>
+
+#inside of the fdisk
+p - see the current partitions
+n - for create a new volume
+
+#create the file system in the volume
+sudo mkfs.xfs <volume>
+
+#mount the file system
+sudo mkdir <folder where the fs will be mounted>
+sudo mount <volume> <folder previously created>
+df -h #check the fs is mounted
